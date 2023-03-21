@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Meme Maker</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <div class="color-options">
+      <input type="color" id="color" />
+      <div
+        class="color-option"
+        style="background-color: #cbd75d"
+        //html에서 이 어틜뷰트를 사용하면 원하는 문자열 어떤 값이든 넣어줄 수 있음
+        //html에 데이터를 넣어주고, 나중에 js에서 사용할 일이 있을 때 쓸 수 있음
+        //data-* 형식, js에서 dataset으로 사용
+        data-color="#cbd75d"
+      ></div>
+      <div
+        class="color-option"
+        style="background-color: #c20118"
+        data-color="#c20118"
+      ></div>
+      <div
+        class="color-option"
+        style="background-color: #1ff184"
+        data-color="#1ff184"
+      ></div>
+      <div
+        class="color-option"
+        style="background-color: #72879e"
+        data-color="#72879e"
+      ></div>
+      <div
+        class="color-option"
+        style="background-color: #60b57b"
+        data-color="#60b57b"
+      ></div>
+      <div
+        class="color-option"
+        style="background-color: #c7852a"
+        data-color="#c7852a"
+      ></div>
+      <div
+        class="color-option"
+        style="background-color: #de00be"
+        data-color="#de00be"
+      ></div>
+      <div
+        class="color-option"
+        style="background-color: #628d27"
+        data-color="#628d27"
+      ></div>
+      <div
+        class="color-option"
+        style="background-color: #bc9603"
+        data-color="#bc9603"
+      ></div>
+      <div
+        class="color-option"
+        style="background-color: #a189b7"
+        data-color="#a189b7"
+      ></div>
+      <div
+        class="color-option"
+        style="background-color: #596c17"
+        data-color="#596c17"
+      ></div>
+    </div>
+    <canvas></canvas>
+    <div class="btns">
+      <input
+        id="line-width"
+        type="range"
+        min="1"
+        max="10"
+        value="5"
+        step="0.5"
+      />
+      <button id="mode-btn">🩸 Fill</button>
+      <button id="destroy-btn">💣 Destroy</button>
+      <button id="eraser-btn">❌ Erase</button>
+      <!--
+        for의 값과 id의 값이 같으면 Add Photo 텍스트 선택 시 input 실행
+        굳이 label 안에 있을 필요 없음
+      -->
+      <label for="file">
+        📨 Add Photo
+        <input type="file" accept="iamge/*" id="file" />
+      </label>
+      <input type="text" placeholder="Add text here :)" id="text" />
+      <button id="save">🖼️ Save image</button>
+    </div>
+    <script src="app.js"></script>
+  </body>
+</html>
